@@ -1,25 +1,12 @@
 FROM nvidia/cuda:9.0-devel
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV REPO_URI https://github.com/xmrig/xmrig-nvidia.git
+ENV DIST_PATH /xmrig-nvidia
 
-#RUN adduser -S -D -H -h /xmrig-nvidia miner
+COPY root /
 
-#RUN apt-get update
+WORKDIR /tmp
 
-#RUN apt-get install -y --no-install-recommends ca-certificates git build-essential cmake libuv1-dev libmicrohttpd-dev
-
-#RUN apt-get install -y --no-install-recommends nvidia-cuda-dev
-#RUN apt-get install -y --no-install-recommends nvidia-cuda-toolkit
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends ca-certificates git build-essential cmake libuv1-dev libmicrohttpd-dev && \
-    git clone https://github.com/xmrig/xmrig-nvidia.git && \
-    cd xmrig-nvidia && \
-    mkdir build && \
-    cd build && \
-    cmake .. && \
-    make
-
-#ENTRYPOINT /app/xmrig-nvidia
-#CMD [ "--help" ]
+CMD [ "/bin/bash", "/scripts/all.sh" ]
 
