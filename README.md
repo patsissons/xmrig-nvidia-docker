@@ -13,7 +13,7 @@ This image uses the official [`nvidia/cuda:9.0-base`](https://hub.docker.com/r/n
 ## Example
 
 ```
-docker run --runtime=nvidia -it patsissons/xmrig-nvidia -o ca.minexmr.com:5555 --donate-level 1 -u 47NHecs6qjvDcbx3eW6cDGDwdm3gDqbHs7G8hzPYRxf3YRTcDJw8kXhDxfHinsjHUwVwdFusSn76UHkaz68KurUgHvFmPMH.github -p x -k
+docker run --runtime=nvidia -it -d --name xmrig-nvidia patsissons/xmrig-nvidia -o ca.minexmr.com:5555 --donate-level 1 -u 47NHecs6qjvDcbx3eW6cDGDwdm3gDqbHs7G8hzPYRxf3YRTcDJw8kXhDxfHinsjHUwVwdFusSn76UHkaz68KurUgHvFmPMH.github -p x -k
 ```
 
 ## Building
