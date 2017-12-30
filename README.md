@@ -1,8 +1,14 @@
 # xmrig-nvidia docker container
 
-This container allows running [xmrig-nvidia](https://github.com/xmrig/xmrig-nvidia) in a docker container. You need to have already installed [nvidia-docker]() to enable passthru on the nvidia card(s). Run the docker container with `--runtime=nvidia` to enable the passthrough.
+This container allows running [xmrig-nvidia](https://github.com/xmrig/xmrig-nvidia) in a docker container. You need to have already installed [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) to enable passthru on the nvidia card(s). Run the docker container with `--runtime=nvidia` to enable the passthrough.
 
 If you have an NVIDIA graphics card in your docker host, you can leverage this card to provide additional hashing power. `xmrig-nvidia` can be used in parallel with the cpu miner.
+
+## Docker
+
+This docker image in available on [docker hub](https://hub.docker.com/r/patsissons/xmrig-nvidia/).
+
+This image uses the official [`nvidia/cuda:9.0-base`](https://hub.docker.com/r/nvidia/cuda/) image for the base, so we always have the latest nvidia cuda infrastructure in place.
 
 ## Example
 
