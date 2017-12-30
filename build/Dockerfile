@@ -6,7 +6,7 @@ ENV DIST_PATH /xmrig-nvidia
 
 COPY root /
 
-WORKDIR /tmp
+WORKDIR /build
 
 CMD [ "/bin/bash", "/scripts/all.sh" ]
 
