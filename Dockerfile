@@ -12,4 +12,3 @@ WORKDIR /xmrig-nvidia
 
 ENTRYPOINT [ "./xmrig-nvidia" ]
 CMD [ "--help" ]
-

@@ -9,4 +9,3 @@ COPY root /
 WORKDIR /build
 
 CMD [ "/bin/bash", "/scripts/all.sh" ]
-
