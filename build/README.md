@@ -4,10 +4,15 @@ The build process uses docker. We start a new container using the `devel` cuda i
 
 ## Example
 
-```
-docker pull nvidia/cuda:9.0-devel
+```bash
+# build the xmrig-nvidia development container image and generate the binaries
+docker pull nvidia/cuda:9.1-devel
 docker build -t patsissons/xmrig-nvidia:build build
 docker run --rm -v $PWD/root/xmrig-nvidia:/xmrig-nvidia patsissons/xmrig-nvidia:build
+
+# build the xmrig-nvidia runtime container image
+docker pull nvidia/cuda:9.1-base
+docker build -t patsissons/xmrig-nvidia .
 ```
 
 ## Environment
@@ -19,9 +24,8 @@ You can adjust the following docker environment variables to customize the build
 
 ## Development Notes
 
-If you want to play around with the developmetn environment, simply run the container with a shell command. All scripts related to the build process are located in `/scripts`.
+If you want to play around with the development environment, simply run the container with a shell command. All scripts related to the build process are located in `/scripts`.
 
-```
+```bash
 docker run --rm -it patsissons/xmrig-nvidia:build /bin/bash
 ```
-

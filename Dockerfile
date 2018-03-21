@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-base
+FROM nvidia/cuda:9.1-base
 
 COPY root /
 
@@ -12,4 +12,3 @@ WORKDIR /xmrig-nvidia
 
 ENTRYPOINT [ "./xmrig-nvidia" ]
 CMD [ "--help" ]
-
