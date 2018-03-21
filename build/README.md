@@ -5,7 +5,7 @@ The build process uses docker. We start a new container using the `devel` cuda i
 ## Example
 
 ```
-docker pull nvidia/cuda:9.0-devel
+docker pull nvidia/cuda:9.1-devel
 docker build -t patsissons/xmrig-nvidia:build build
 docker run --rm -v $PWD/root/xmrig-nvidia:/xmrig-nvidia patsissons/xmrig-nvidia:build
 ```
