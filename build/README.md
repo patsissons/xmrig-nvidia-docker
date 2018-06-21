@@ -6,12 +6,12 @@ The build process uses docker. We start a new container using the `devel` cuda i
 
 ```bash
 # build the xmrig-nvidia development container image and generate the binaries
-docker pull nvidia/cuda:9.1-devel
+docker pull nvidia/cuda:9.2-devel
 docker build -t patsissons/xmrig-nvidia:build build
 docker run --rm -v $PWD/root/xmrig-nvidia:/xmrig-nvidia patsissons/xmrig-nvidia:build
 
 # build the xmrig-nvidia runtime container image
-docker pull nvidia/cuda:9.1-base
+docker pull nvidia/cuda:9.2-base
 docker build -t patsissons/xmrig-nvidia .
 ```
 

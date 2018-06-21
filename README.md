@@ -2,7 +2,11 @@
 
 [![Docker Stars](https://img.shields.io/docker/stars/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/)[![Docker Pulls](https://img.shields.io/docker/pulls/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/)[![Docker Build Status](https://img.shields.io/docker/build/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/)
 
-This container allows running [xmrig-nvidia](https://github.com/xmrig/xmrig-nvidia) in a docker container. You need to have already installed [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) to enable passthru on the nvidia card(s). Run the docker container with `--runtime=nvidia` to enable the passthrough.
+This container allows running [xmrig-nvidia](https://github.com/xmrig/xmrig-nvidia) in a docker container. You need to have already installed [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) to enable passthru on the nvidia card(s). You will also need to have the [`cuda-drivers`](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64) installed. Run the docker container with `--runtime=nvidia` to enable the passthrough.
+
+### CUDA drivers
+
+Installing cuda drivers on [ubuntu 16.04](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork) is the easiest way to get things going. You can install the drivers with `apt-get install --no-install-recommends cuda-drivers`. Make sure to reboot after installing new drivers.
 
 If you have an NVIDIA graphics card in your docker host, you can leverage this card to provide additional hashing power. `xmrig-nvidia` can be used in parallel with the cpu miner.
 
@@ -10,7 +14,7 @@ If you have an NVIDIA graphics card in your docker host, you can leverage this c
 
 This docker image in available on [docker hub](https://hub.docker.com/r/patsissons/xmrig-nvidia/).
 
-This image uses the official [`nvidia/cuda:9.1-base`](https://hub.docker.com/r/nvidia/cuda/) image for the base, so we always have the latest nvidia cuda infrastructure in place.
+This image uses the official [`nvidia/cuda:9.2-base`](https://hub.docker.com/r/nvidia/cuda/) image for the base, so we always have the latest nvidia cuda infrastructure in place.
 
 ## Example
 
