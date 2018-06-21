@@ -1,8 +1,8 @@
 FROM nvidia/cuda:9.2-devel
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV REPO_URI https://github.com/xmrig/xmrig-nvidia.git
-ENV DIST_PATH /xmrig-nvidia
+ENV DEBIAN_FRONTEND=noninteractive \
+    REPO_URI=https://github.com/xmrig/xmrig-nvidia.git \
+    DIST_PATH=/xmrig-nvidia
 
 COPY root /
 
