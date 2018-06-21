@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.1-devel
+FROM nvidia/cuda:9.2-devel
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV REPO_URI https://github.com/xmrig/xmrig-nvidia.git

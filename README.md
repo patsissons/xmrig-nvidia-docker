@@ -10,7 +10,7 @@ If you have an NVIDIA graphics card in your docker host, you can leverage this c
 
 This docker image in available on [docker hub](https://hub.docker.com/r/patsissons/xmrig-nvidia/).
 
-This image uses the official [`nvidia/cuda:9.1-base`](https://hub.docker.com/r/nvidia/cuda/) image for the base, so we always have the latest nvidia cuda infrastructure in place.
+This image uses the official [`nvidia/cuda:9.2-base`](https://hub.docker.com/r/nvidia/cuda/) image for the base, so we always have the latest nvidia cuda infrastructure in place.
 
 ## Example
 
