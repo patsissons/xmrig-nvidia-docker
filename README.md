@@ -4,6 +4,14 @@
 
 This container allows running [xmrig-nvidia](https://github.com/xmrig/xmrig-nvidia) in a docker container. You need to have already installed [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) to enable passthru on the nvidia card(s). You will also need to have the [`cuda-drivers`](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64) installed. Run the docker container with `--runtime=nvidia` to enable the passthrough.
 
+### Tags
+
+CUDA driver versions correspond to the following tags
+
+* [9.2](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.2) ([latest](https://github.com/patsissons/xmrig-nvidia-docker/tree/master))
+* [9.1](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.1)
+* [9.0](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.1)
+
 ### CUDA drivers
 
 Installing cuda drivers on [ubuntu 16.04](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork) is the easiest way to get things going. You can install the drivers with `apt-get install --no-install-recommends cuda-drivers`. Make sure to reboot after installing new drivers.
