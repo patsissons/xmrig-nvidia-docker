@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.2-base
+FROM nvidia/cuda:9.1-base
 
 COPY root /
 

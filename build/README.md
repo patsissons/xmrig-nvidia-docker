@@ -6,35 +6,29 @@ The build process uses docker. We start a new container using the `devel` cuda i
 
 ```bash
 # checkout current release
-git checkout 9.2-devel
+git checkout 9.1-devel
 git pull
 
 # build the xmrig-nvidia development container image and generate the binaries
-docker pull nvidia/cuda:9.2-devel
-docker build -t patsissons/xmrig-nvidia:9.2-build build
-docker run --rm -v $PWD/root/xmrig-nvidia:/xmrig-nvidia patsissons/xmrig-nvidia:9.2-build
-docker push patsissons/xmrig-nvidia:9.2-build
+docker pull nvidia/cuda:9.1-devel
+docker build -t patsissons/xmrig-nvidia:9.1-build build
+docker run --rm -v $PWD/root/xmrig-nvidia:/xmrig-nvidia patsissons/xmrig-nvidia:9.1-build
+docker push patsissons/xmrig-nvidia:9.1-build
 
 # build the xmrig-nvidia runtime container image
-docker pull nvidia/cuda:9.2-base
-docker build -t patsissons/xmrig-nvidia:9.2-devel .
+docker pull nvidia/cuda:9.1-base
+docker build -t patsissons/xmrig-nvidia:9.1-devel .
 
 # publish devel release
 git add -A
-git push --force-with-lease origin 9.2-devel
+git push --force-with-lease origin 9.1-devel
 
 # tag releases
-docker tag patsissons/xmrig-nvidia:9.2-devel patsissons/xmrig-nvidia:9.2
-docker tag patsissons/xmrig-nvidia:9.2 patsissons/xmrig-nvidia:develop
-docker tag patsissons/xmrig-nvidia:9.2 patsissons/xmrig-nvidia:latest
+docker tag patsissons/xmrig-nvidia:9.1-devel patsissons/xmrig-nvidia:9.1
 
 # publish release
-git branch -f develop 9.2-devel
-git push --force-with-lease origin develop
-git branch -f 9.2 9.2-devel
-git push --force-with-lease origin 9.2
-git branch -f master 9.2
-git push --force-with-lease origin master
+git branch -f 9.1 9.1-devel
+git push --force-with-lease origin 9.1
 ```
 
 ## Environment
