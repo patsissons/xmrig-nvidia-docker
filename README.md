@@ -1,6 +1,6 @@
 # xmrig-nvidia docker container
 
-[![Docker Stars](https://img.shields.io/docker/stars/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/)[![Docker Pulls](https://img.shields.io/docker/pulls/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/)[![Docker Build Status](https://img.shields.io/docker/build/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/)
+[![Docker Stars](https://img.shields.io/docker/stars/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/) [![Docker Pulls](https://img.shields.io/docker/pulls/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/) [![Docker Build Status](https://img.shields.io/docker/build/patsissons/xmrig-nvidia.svg)](https://hub.docker.com/r/patsissons/xmrig-nvidia/)
 
 This container allows running [xmrig-nvidia](https://github.com/xmrig/xmrig-nvidia) in a docker container. You need to have already installed [nvidia-docker](https://github.com/NVIDIA/nvidia-docker) to enable passthru on the nvidia card(s). You will also need to have the [`cuda-drivers`](https://developer.nvidia.com/cuda-downloads?target_os=Linux&target_arch=x86_64) installed. Run the docker container with `--runtime=nvidia` to enable the passthrough.
 
