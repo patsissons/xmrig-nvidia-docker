@@ -4,5 +4,4 @@
 
 apt-get update
 
-apt-get install -y --no-install-recommends ca-certificates git build-essential cmake libuv1-dev libmicrohttpd-dev
-
+apt-get install -y --no-install-recommends build-essential ca-certificates cmake git libmicrohttpd-dev libssl-dev libuv1-dev
