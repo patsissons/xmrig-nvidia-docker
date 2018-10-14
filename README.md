@@ -8,9 +8,10 @@ This container allows running [xmrig-nvidia](https://github.com/xmrig/xmrig-nvid
 
 CUDA driver versions correspond to the following tags
 
-* [9.2](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.2) ([latest](https://github.com/patsissons/xmrig-nvidia-docker/tree/master))
-* [9.1](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.1)
-* [9.0](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.1)
+- [10.0](https://github.com/patsissons/xmrig-nvidia-docker/tree/10.0) ([latest](https://github.com/patsissons/xmrig-nvidia-docker/tree/master))
+- [9.2](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.2)
+- [9.1](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.1)
+- [9.0](https://github.com/patsissons/xmrig-nvidia-docker/tree/9.1)
 
 ### CUDA drivers
 
@@ -22,7 +23,7 @@ If you have an NVIDIA graphics card in your docker host, you can leverage this c
 
 This docker image in available on [docker hub](https://hub.docker.com/r/patsissons/xmrig-nvidia/).
 
-This image uses the official [`nvidia/cuda:9.2-base`](https://hub.docker.com/r/nvidia/cuda/) image for the base, so we always have the latest nvidia cuda infrastructure in place.
+This image uses the official [`nvidia/cuda:10.0-base`](https://hub.docker.com/r/nvidia/cuda/) image for the base, so we always have the latest nvidia cuda infrastructure in place.
 
 ## Example
 
@@ -44,8 +45,8 @@ A [Dockerfile](https://github.com/patsissons/xmrig-nvidia-docker/blob/master/bui
 
 If you find this docker image useful, donations for work on dockerizing the build and mining app are appreciated at any of the folllowing addresses:
 
-* BTC: `1LNY9wSPs913Y9jXMTrrVze1E41nhm6Qv7`
-* LTC: `LhnwdbrnQaQbjDkqxXFmxXGPcFhMBA9gFu`
-* ETH: `a05c67acbec8afc30287704540b215284a7c21a9`
-* XMR: `47NHecs6qjvDcbx3eW6cDGDwdm3gDqbHs7G8hzPYRxf3YRTcDJw8kXhDxfHinsjHUwVwdFusSn76UHkaz68KurUgHvFmPMH`
-* XRP: `rG9vAB1rbgDW3Ds7HFqJeF9Pi4fGRbEs93`
+- BTC: `1LNY9wSPs913Y9jXMTrrVze1E41nhm6Qv7`
+- LTC: `LhnwdbrnQaQbjDkqxXFmxXGPcFhMBA9gFu`
+- ETH: `a05c67acbec8afc30287704540b215284a7c21a9`
+- XMR: `47NHecs6qjvDcbx3eW6cDGDwdm3gDqbHs7G8hzPYRxf3YRTcDJw8kXhDxfHinsjHUwVwdFusSn76UHkaz68KurUgHvFmPMH`
+- XRP: `rG9vAB1rbgDW3Ds7HFqJeF9Pi4fGRbEs93`
