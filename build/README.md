@@ -12,8 +12,8 @@ git pull
 # build the xmrig-nvidia development container image and generate the binaries
 docker pull nvidia/cuda:9.2-devel
 docker build -t patsissons/xmrig-nvidia:9.2-build build
-docker push patsissons/xmrig-nvidia:9.2-build
 docker run --rm -v $PWD/root/xmrig-nvidia:/xmrig-nvidia patsissons/xmrig-nvidia:9.2-build
+docker push patsissons/xmrig-nvidia:9.2-build
 
 # build the xmrig-nvidia runtime container image
 docker pull nvidia/cuda:9.2-base
